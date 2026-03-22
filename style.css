@@ -509,3 +509,99 @@ body {
     color: #334155;
     line-height: 1.8;
 }
+
+/* ── ЛР4 ANIMATIONS ── */
+
+/* @keyframes fadeInUp — hero content entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-label {
+    animation: fadeInUp 0.6s ease both;
+}
+
+.hero h1 {
+    animation: fadeInUp 0.7s ease 0.15s both;
+}
+
+.hero-desc {
+    animation: fadeInUp 0.7s ease 0.3s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 0.7s ease 0.45s both;
+}
+
+.hero-pills {
+    animation: fadeInUp 0.7s ease 0.6s both;
+}
+
+/* @keyframes pulse — primary button */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+    }
+}
+
+.btn-primary {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* transform: translateY — product card hover lift */
+.product-card {
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+/* transition on nav links — scale underline + color (already in nav a::after, enhancing) */
+.nav a {
+    transition: color 0.2s, transform 0.2s;
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* @keyframes spinScale — benefit icon on hover */
+@keyframes spinScale {
+    from {
+        transform: rotateY(0deg) scale(1);
+    }
+    to {
+        transform: rotateY(360deg) scale(1.2);
+    }
+}
+
+.benefit-item .benefit-icon {
+    transition: transform 0.5s ease;
+    display: inline-block;
+}
+
+.benefit-item:hover .benefit-icon {
+    animation: spinScale 0.6s ease forwards;
+}
+
+/* scroll-to-top button entrance */
+@keyframes bounceIn {
+    0%   { transform: scale(0.5); opacity: 0; }
+    70%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1);   opacity: 1; }
+}
+
+.btn-scroll-top {
+    animation: bounceIn 0.5s ease both;
+}
