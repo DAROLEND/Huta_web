@@ -324,7 +324,7 @@ body {
     border-top: 4px solid var(--accent);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative; /
+    position: relative; /* для позиціювання бейджів */
 }
 
 /* ── BADGES (position: absolute) ── */
